@@ -8,15 +8,17 @@ import android.widget.TextView;
 
 import com.example.fearpally.kontrolnatacka2.R;
 import com.example.fearpally.kontrolnatacka2.fragments.MasterFragment;
+import com.example.fearpally.kontrolnatacka2.model.Glumac;
+import com.example.fearpally.kontrolnatacka2.provaders.GlumacProvider;
 
 import java.util.List;
 
 public class GlumacAdapter extends RecyclerView.Adapter<GlumacAdapter.ViewHolder> {
-    private List<String> glumac;
+    private List<Glumac> glumci;
     private MasterFragment.OnItemSelectedListener listener;
 
-    public GlumacAdapter(MasterFragment.OnItemSelectedListener listener, List<String> glumac) {
-        this.glumac = glumac;
+    public GlumacAdapter(MasterFragment.OnItemSelectedListener listener, List<Glumac> glumci) {
+        this.glumci = glumci;
         this.listener = listener;
     }
     @Override
@@ -31,7 +33,7 @@ public class GlumacAdapter extends RecyclerView.Adapter<GlumacAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final int pos = position;
-        holder.textView.setText(glumac.get(position));
+        holder.textView.setText(glumci.get(position).getIme() + " " + glumci.get(position).getPrezime());
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +43,7 @@ public class GlumacAdapter extends RecyclerView.Adapter<GlumacAdapter.ViewHolder
     }
     @Override
     public int getItemCount() {
-        return glumac.size();
+        return glumci.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

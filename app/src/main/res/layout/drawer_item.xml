@@ -8,11 +8,13 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="102dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp" />
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:id="@+id/title"
@@ -22,16 +24,14 @@
         android:layout_toRightOf="@+id/icon"
         android:layout_toEndOf="@+id/icon"
         android:textSize="18sp"
-        android:gravity="center_vertical"
         android:textColor="#000000"
         android:textStyle="bold"  />
 
     <TextView
         android:id="@+id/subtitle"
-        android:layout_width="192dp"
-        android:layout_height="74dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_below="@id/title" />
 
 </RelativeLayout>

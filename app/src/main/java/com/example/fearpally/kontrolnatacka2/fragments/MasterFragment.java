@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.fearpally.kontrolnatacka2.R;
 import com.example.fearpally.kontrolnatacka2.adapters.GlumacAdapter;
+import com.example.fearpally.kontrolnatacka2.model.Glumac;
 import com.example.fearpally.kontrolnatacka2.provaders.GlumacProvider;
 
 import java.util.List;
@@ -26,7 +27,8 @@ public class MasterFragment extends Fragment{
 
 
         // Loads glumaca from array resource
-        final List<String> glumacNames = GlumacProvider.getGlumacNames();
+
+        final List<Glumac> glumacNames = GlumacProvider.getGlumci();
 
         // Creates an Adapter for fruits
         GlumacAdapter dataAdapter = new GlumacAdapter((OnItemSelectedListener) getActivity(), glumacNames);

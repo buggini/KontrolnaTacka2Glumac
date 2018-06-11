@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fearpally.kontrolnatacka2.R;
+import com.example.fearpally.kontrolnatacka2.model.Filmovi;
 import com.example.fearpally.kontrolnatacka2.model.Glumac;
 import com.example.fearpally.kontrolnatacka2.provaders.FilmoviProvider;
 import com.example.fearpally.kontrolnatacka2.provaders.GlumacProvider;
@@ -106,7 +107,7 @@ public class DetailFragment extends Fragment{
 
         // Finds "spCategory" Spiner and sets "selection" property
         Spinner category = (Spinner) getView().findViewById(R.id.sp_filmovi);
-        List<String> katogrijaNames = FilmoviProvider.getFilmNames();
+        List<Filmovi> katogrijaNames = FilmoviProvider.getFilm();
         ArrayAdapter<String> adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, katogrijaNames);
         category.setAdapter(adapter);
         category.setSelection((int) GlumacProvider.getGlumacById(position).getFilmovi().getId());

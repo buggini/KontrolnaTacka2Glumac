@@ -8,7 +8,7 @@ import java.util.List;
 
 public class GlumacProvider {
 
-    public static List<Glumac> getGlumac (){
+    public static List<Glumac> getGlumci(){
 
         Filmovi filmovi0= new Filmovi(0, "Mrtav `Ladan");
         Filmovi filmovi1=new Filmovi(1, "Zona Zanfirova");
@@ -25,14 +25,8 @@ public class GlumacProvider {
         return glumac;
 
     }
-    public static List<String> getGlumacNames(){
 
-        List<String> names = new ArrayList<>();
-        names.add("Nikola Djuricko");
-        names.add("Nikola Kojo");
-        return names;
 
-    }
     public static Glumac getGlumacById(int id){
 
         Filmovi filmovi0= new Filmovi(0, "Mrtav `Ladan");
